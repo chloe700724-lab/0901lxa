@@ -3,486 +3,431 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>西藏聖境之旅 9天 完美更新版</title>
-    <!-- Tailwind CSS -->
+    <title>西藏聖境之旅 | 完整9天自訂行程與智慧分帳 App</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght=400;500;700&display=swap" rel="stylesheet">
     
     <style>
         body {
             font-family: 'Noto Sans TC', sans-serif;
-            background-color: #F3F4F6; /* 暖灰 */
-            background-image: radial-gradient(#3B7AAE 10%, transparent 10%);
+            background-color: #F8F9FA;
+            /* 韓式可愛點點背景 */
+            background-image: radial-gradient(#3B7AAE 1px, transparent 1px);
             background-size: 24px 24px;
         }
-        .fuji-blue-bg { background-color: #3B7AAE; }
-        .fuji-blue-text { color: #3B7AAE; }
-        .fuji-blue-border { border-color: #3B7AAE; }
-        .hide-scrollbar::-webkit-scrollbar { display: none; }
-        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-        
-        /* 韓式分帳成員選取晶片風格 */
-        .member-checkbox:checked + div {
-            background-color: #3B7AAE;
-            color: white;
-            border-color: #3B7AAE;
-        }
+        .fuji-blue { color: #3B7AAE; }
+        .bg-fuji-blue { background-color: #3B7AAE; }
+        .border-fuji-blue { border-color: #3B7AAE; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
     </style>
 </head>
-<body class="pb-28 text-gray-700 antialiased max-w-md mx-auto bg-slate-50 min-h-screen shadow-2xl relative">
+<body class="pb-36 text-slate-700 antialiased">
 
-    <!-- 頂部 Header -->
-    <header class="fuji-blue-bg text-white px-6 pt-8 pb-12 rounded-b-[2.5rem] shadow-lg relative">
-        <div class="absolute top-4 right-6 opacity-20 text-6xl"><i class="fa-solid fa-mountain"></i></div>
-        <span class="bg-white/20 text-xs px-3 py-1 rounded-full backdrop-blur-sm font-medium">VIP豪華6-10人高端團</span>
-        <h1 class="text-2xl font-bold mt-2 tracking-wide">拉薩+珠峰+納木錯</h1>
-        <p class="text-sm opacity-90 mt-1"><i class="fa-solid fa-calendar-days mr-1"></i> 夢幻西藏極致探險 9日遊</p>
+    <header class="bg-white/90 backdrop-blur-md sticky top-0 z-40 border-b border-slate-100 px-6 py-4 flex justify-between items-center shadow-sm">
+        <div>
+            <h1 class="text-xl font-bold text-slate-800 tracking-wide">西藏聖境之旅</h1>
+            <p class="text-xs text-slate-400 mt-0.5">自訂行程 × 7人隨行智慧分帳</p>
+        </div>
+        <span class="bg-blue-50 text-[#3B7AAE] text-xs font-bold px-3 py-1.5 rounded-full border border-blue-100">
+            9天完整尊榮版
+        </span>
     </header>
 
-    <!-- 主行程內容 -->
-    <main class="px-4 -mt-6 space-y-6 relative z-10">
+    <main class="max-w-md mx-auto px-4 pt-4 space-y-6">
 
-        <!-- Day 1 -->
-        <section id="day1" class="bg-white rounded-[2rem] p-5 shadow-sm border border-gray-100">
-            <div class="flex items-center justify-between border-b pb-3 mb-4">
-                <div class="flex items-center gap-2">
-                    <span class="fuji-blue-bg text-white text-xs font-bold px-3 py-1 rounded-full">Day 1</span>
-                    <h2 class="font-bold text-lg">西藏之旅前哨站</h2>
-                </div>
+        <div class="bg-white rounded-3xl p-5 shadow-sm border border-slate-100 space-y-2">
+            <div class="flex items-center space-x-3 text-xs text-slate-500">
+                <i class="fa-solid fa-circle-info text-[#3B7AAE] text-sm"></i>
+                <p><b>提示：</b> 行程修改與記帳本皆會自動儲存。點擊各景點的 <i class="fa-solid fa-pen text-xs mx-0.5"></i> 可隨時調整，點擊右下角 <i class="fa-solid fa-calculator text-amber-500"></i> 開啟智慧分帳。</p>
             </div>
-            <div class="space-y-6">
-                <div class="flex gap-3" id="spot-1">
-                    <div class="flex flex-col items-center"><div class="w-3 h-3 rounded-full fuji-blue-bg mt-1.5"></div><div class="w-0.5 h-full bg-gray-200 my-1"></div></div>
-                    <div class="flex-1">
-                        <div class="flex items-center justify-between">
-                            <span class="spot-type text-xs font-medium px-2 py-0.5 rounded bg-blue-50 text-blue-600 border border-blue-100">交通</span>
-                            <button onclick="openEditModal('spot-1')" class="text-xs bg-gray-100 hover:bg-gray-200 text-gray-500 px-2 py-1 rounded-full transition-all"><i class="fa-solid fa-pen-to-square mr-1"></i>編輯</button>
-                        </div>
-                        <h3 class="spot-title font-bold text-base mt-1">台中 / 香港 / 成都</h3>
-                        <p class="spot-desc text-sm text-gray-500 mt-0.5">展開西藏神聖之旅！今日搭乘航班經香港轉機前往成都[cite: 2]。</p>
-                        <div class="flex gap-2 mt-2"><span class="text-xs px-2 py-0.5 rounded-full bg-slate-100 text-slate-600">#出發</span></div>
-                    </div>
-                </div>
-                <div class="flex gap-3" id="spot-1b">
-                    <div class="flex flex-col items-center"><div class="w-3 h-3 rounded-full bg-amber-500 mt-1.5"></div></div>
-                    <div class="flex-1">
-                        <div class="flex items-center justify-between">
-                            <span class="spot-type text-xs font-medium px-2 py-0.5 rounded bg-amber-50 text-amber-600 border border-amber-100">酒店</span>
-                            <button onclick="openEditModal('spot-1b')" class="text-xs bg-gray-100 hover:bg-gray-200 text-gray-500 px-2 py-1 rounded-full transition-all"><i class="fa-solid fa-pen-to-square mr-1"></i>編輯</button>
-                        </div>
-                        <h3 class="spot-title font-bold text-base mt-1">重慶解放碑美居飯店</h3>
-                        <p class="spot-desc text-sm text-gray-500 mt-0.5">入住第一晚指定酒店，舒適整備體力[cite: 2]。</p>
-                    </div>
-                </div>
-            </div>
-            <div class="mt-4 pt-3 border-t bg-slate-50 rounded-2xl p-3 text-xs space-y-1">
-                <p class="font-semibold text-gray-600"><i class="fa-solid fa-shirt mr-1"></i> 建議穿著與天氣提示</p>
-                <p class="text-gray-500">氣候較濕潤，著舒適便服與薄外套方便機上活動。</p>
-            </div>
-        </section>
+        </div>
 
-        <!-- Day 2 -->
-        <section id="day2" class="bg-white rounded-[2rem] p-5 shadow-sm border border-gray-100">
-            <div class="flex items-center justify-between border-b pb-3 mb-4">
-                <div class="flex items-center gap-2">
-                    <span class="fuji-blue-bg text-white text-xs font-bold px-3 py-1 rounded-full">Day 2</span>
-                    <h2 class="font-bold text-lg">初抵聖城・靜心適應</h2>
-                </div>
+        <div id="day1" class="space-y-3 scroll-mt-20">
+            <div class="flex items-center space-x-2">
+                <span class="bg-fuji-blue text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Day 1</span>
+                <h2 class="text-lg font-bold text-slate-800">啟程 · 中轉驛站</h2>
             </div>
-            <div class="space-y-6">
-                <div class="flex gap-3" id="spot-2">
-                    <div class="flex flex-col items-center"><div class="w-3 h-3 rounded-full fuji-blue-bg mt-1.5"></div><div class="w-0.5 h-full bg-gray-200 my-1"></div></div>
-                    <div class="flex-1">
-                        <div class="flex items-center justify-between">
-                            <span class="spot-type text-xs font-medium px-2 py-0.5 rounded bg-blue-50 text-blue-600 border border-blue-100">交通</span>
-                            <button onclick="openEditModal('spot-2')" class="text-xs bg-gray-100 hover:bg-gray-200 text-gray-500 px-2 py-1 rounded-full transition-all"><i class="fa-solid fa-pen-to-square mr-1"></i>編輯</button>
+            <div class="bg-white rounded-3xl p-5 shadow-sm border border-slate-100 space-y-4">
+                <div class="border-l-2 border-slate-200 pl-4 space-y-4 relative">
+                    <div class="spot-card relative" data-id="spot-1">
+                        <button onclick="openEditModal('spot-1')" class="absolute top-0 right-0 text-slate-400 hover:text-[#3B7AAE] bg-slate-50 p-1.5 rounded-full"><i class="fa-solid fa-pen text-xs"></i></button>
+                        <div class="flex items-center space-x-2">
+                            <span class="tag-type bg-blue-50 text-[#3B7AAE] text-2xs px-2 py-0.5 rounded-md font-bold">交通</span>
+                            <h3 class="spot-title font-bold text-sm text-slate-800">台中 / 香港 / 成都</h3>
                         </div>
-                        <h3 class="spot-title font-bold text-base mt-1">抵達拉薩 (火車站/機場接站)</h3>
-                        <p class="spot-desc text-sm text-gray-500 mt-0.5">司機導遊獻上哈達接站，沿拉薩河風景帶前往拉薩市區，感受高原純淨空氣[cite: 2]。</p>
-                        <div class="flex gap-2 mt-2"><span class="text-xs px-2 py-0.5 rounded-full bg-orange-50 text-orange-600">#必拍藏式哈達</span></div>
-                        <div class="bg-blue-50/50 rounded-xl p-2 mt-2 text-xs text-blue-800 space-y-1">
-                            <p><strong>💡 拍照小技巧：</strong> 接過哈達時可請同伴側拍，拉薩河風景帶作背景十分神聖。</p>
-                            <p><strong>🚗 交通資訊：</strong> 接站開往拉薩市區車程約 30~40 分鐘[cite: 2]。</p>
+                        <p class="spot-desc text-xs text-slate-500 mt-1">開啟西藏神聖之旅的前奏，搭乘航班前往中轉城市。</p>
+                    </div>
+                    <div class="spot-card relative pt-2" data-id="spot-2">
+                        <button onclick="openEditModal('spot-2')" class="absolute top-2 right-0 text-slate-400 hover:text-[#3B7AAE] bg-slate-50 p-1.5 rounded-full"><i class="fa-solid fa-pen text-xs"></i></button>
+                        <div class="flex items-center space-x-2">
+                            <span class="tag-type bg-amber-50 text-amber-600 text-2xs px-2 py-0.5 rounded-md font-bold">酒店</span>
+                            <h3 class="spot-title font-bold text-sm text-slate-800">重慶解放碑美居飯店</h3>
+                        </div>
+                        <p class="spot-desc text-xs text-slate-500 mt-1">好好休息，養精蓄銳，迎接明天的聖城高原。</p>
+                        <div class="text-2xs text-slate-400 mt-2 space-y-1 bg-slate-50 p-2.5 rounded-xl">
+                            <p>💡 <span class="tip-photo"><b>拍照小技巧：</b> 晚上可步行至解放碑拍攝霓虹璀璨的都市夜景，低角度仰拍更有大都市氣勢。</span></p>
+                            <p>🚗 <span class="tip-park"><b>停車＆加油：</b> 飯店備有專屬地下停車場，周邊1公里內加油便利。</span></p>
                         </div>
                     </div>
                 </div>
-                <div class="flex gap-3" id="spot-3">
-                    <div class="flex flex-col items-center"><div class="w-3 h-3 rounded-full bg-amber-500 mt-1.5"></div></div>
-                    <div class="flex-1">
-                        <div class="flex items-center justify-between">
-                            <span class="spot-type text-xs font-medium px-2 py-0.5 rounded bg-amber-50 text-amber-600 border border-amber-100">酒店</span>
-                            <button onclick="openEditModal('spot-3')" class="text-xs bg-gray-100 hover:bg-gray-200 text-gray-500 px-2 py-1 rounded-full transition-all"><i class="fa-solid fa-pen-to-square mr-1"></i>編輯</button>
-                        </div>
-                        <h3 class="spot-title font-bold text-base mt-1">拉薩殊勝·歸藏莊園/同級</h3>
-                        <p class="spot-desc text-sm text-gray-500 mt-0.5">享受加濕器+供氧+空調頂級配備[cite: 2]！第一天由醫生做基礎健康檢查[cite: 2]。請多休息、勿激烈運動或外出，預防高反[cite: 2]。</p>
-                    </div>
+                <div class="bg-blue-50/50 rounded-2xl p-3 text-xs text-slate-600 space-y-1">
+                    <p>👗 <b>建議穿著：</b> 舒適輕便的純棉防曬休閒服，方便機艙移動與適應兩地溫差。</p>
+                    <p>☀️ <b>天氣提示：</b> 中轉城市氣候相對濕潤，保持充足睡眠為進藏蓄力。</p>
                 </div>
             </div>
-            <div class="mt-4 pt-3 border-t bg-slate-50 rounded-2xl p-3 text-xs space-y-1">
-                <p class="font-semibold text-gray-600"><i class="fa-solid fa-shirt mr-1"></i> 建議穿著與天氣提示</p>
-                <p class="text-gray-500">拉薩海拔3650米[cite: 2]，早晚偏涼。請預備防風保暖外套，多喝水、多吃水果[cite: 2]。</p>
-            </div>
-        </section>
+        </div>
 
-        <!-- Day 3 -->
-        <section id="day3" class="bg-white rounded-[2rem] p-5 shadow-sm border border-gray-100">
-            <div class="flex items-center justify-between border-b pb-3 mb-4">
-                <div class="flex items-center gap-2">
-                    <span class="fuji-blue-bg text-white text-xs font-bold px-3 py-1 rounded-full">Day 3</span>
-                    <h2 class="font-bold text-lg">拉薩兩大聖殿朝聖</h2>
-                </div>
+        <div id="day2" class="space-y-3 scroll-mt-20">
+            <div class="flex items-center space-x-2">
+                <span class="bg-fuji-blue text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Day 2</span>
+                <h2 class="text-lg font-bold text-slate-800">抵達聖城 · 適應高原</h2>
             </div>
-            <div class="space-y-6">
-                <div class="flex gap-3" id="spot-4">
-                    <div class="flex flex-col items-center"><div class="w-3 h-3 rounded-full bg-red-500 mt-1.5"></div><div class="w-0.5 h-full bg-gray-200 my-1"></div></div>
-                    <div class="flex-1">
-                        <div class="flex items-center justify-between">
-                            <span class="spot-type text-xs font-medium px-2 py-0.5 rounded bg-red-50 text-red-600 border border-red-100">景點</span>
-                            <button onclick="openEditModal('spot-4')" class="text-xs bg-gray-100 hover:bg-gray-200 text-gray-500 px-2 py-1 rounded-full transition-all"><i class="fa-solid fa-pen-to-square mr-1"></i>編輯</button>
+            <div class="bg-white rounded-3xl p-5 shadow-sm border border-slate-100 space-y-4">
+                <div class="border-l-2 border-slate-200 pl-4 space-y-4 relative">
+                    <div class="spot-card relative" data-id="spot-3">
+                        <button onclick="openEditModal('spot-3')" class="absolute top-0 right-0 text-slate-400 hover:text-[#3B7AAE] bg-slate-50 p-1.5 rounded-full"><i class="fa-solid fa-pen text-xs"></i></button>
+                        <div class="flex items-center space-x-2">
+                            <span class="tag-type bg-blue-50 text-[#3B7AAE] text-2xs px-2 py-0.5 rounded-md font-bold">交通</span>
+                            <h3 class="spot-title font-bold text-sm text-slate-800">拉薩火車站 / 機場接站</h3>
                         </div>
-                        <h3 class="spot-title font-bold text-base mt-1">布達拉宮 (贈下午茶)</h3>
-                        <p class="spot-desc text-sm text-gray-500 mt-0.5">遊覽世界最高古代宮堡建築群，政教權力中心[cite: 2]。午餐後特別享受宮廷下午茶[cite: 2]。</p>
-                        <div class="flex gap-2 mt-2"><span class="text-xs px-2 py-0.5 rounded-full bg-red-50 text-red-600">#必拍聖殿</span><span class="text-xs px-2 py-0.5 rounded-full bg-orange-50 text-orange-600">#布宮下午茶</span></div>
-                        <div class="bg-blue-50/50 rounded-xl p-2 mt-2 text-xs text-blue-800 space-y-1">
-                            <p><strong>💡 拍照小技巧：</strong> 藥王山觀景台是拍攝布達拉宮經典全景的絕佳角度。</p>
+                        <p class="spot-desc text-xs text-slate-500 mt-1">專車哈達接站，沿拉薩河風景帶前往市區，感受純淨空氣。</p>
+                    </div>
+                    <div class="spot-card relative pt-2" data-id="spot-4">
+                        <button onclick="openEditModal('spot-4')" class="absolute top-2 right-0 text-slate-400 hover:text-[#3B7AAE] bg-slate-50 p-1.5 rounded-full"><i class="fa-solid fa-pen text-xs"></i></button>
+                        <div class="flex items-center space-x-2">
+                            <span class="tag-type bg-amber-50 text-amber-600 text-2xs px-2 py-0.5 rounded-md font-bold">酒店</span>
+                            <h3 class="spot-title font-bold text-sm text-slate-800">拉薩殊勝·歸藏莊園</h3>
+                        </div>
+                        <p class="spot-desc text-xs text-rose-500 mt-1"><i class="fa-solid fa-triangle-exclamation mr-1"></i>海拔3650米，頭兩天請避免外出與劇烈運動，多喝水，第一晚切勿洗澡洗頭。</p>
+                        <div class="text-2xs text-slate-400 mt-2 space-y-1 bg-slate-50 p-2.5 rounded-xl">
+                            <p>💡 <span class="tip-photo"><b>拍照小技巧：</b> 車窗外掠過拉薩河時，可用手機慢動作捕捉水面與遠山的藍天倒影。</span></p>
+                            <p>🚗 <span class="tip-park"><b>停車＆加油：</b> 莊園內設有專屬大院停靠旅遊車，安全方便。</span></p>
                         </div>
                     </div>
                 </div>
-                <div class="flex gap-3" id="spot-5">
-                    <div class="flex flex-col items-center"><div class="w-3 h-3 rounded-full bg-red-500 mt-1.5"></div><div class="w-0.5 h-full bg-gray-200 my-1"></div></div>
-                    <div class="flex-1">
-                        <div class="flex items-center justify-between">
-                            <span class="spot-type text-xs font-medium px-2 py-0.5 rounded bg-red-50 text-red-600 border border-red-100">景點</span>
-                            <button onclick="openEditModal('spot-5')" class="text-xs bg-gray-100 hover:bg-gray-200 text-gray-500 px-2 py-1 rounded-full transition-all"><i class="fa-solid fa-pen-to-square mr-1"></i>編輯</button>
-                        </div>
-                        <h3 class="spot-title font-bold text-base mt-1">大昭寺 & 八廓街</h3>
-                        <p class="spot-desc text-sm text-gray-500 mt-0.5">瞻仰文成公主入藏釋迦牟尼12歲等身像，隨老百姓圍繞八廓街轉經祈福[cite: 2]。晚上享用贈送的歡迎晚宴[cite: 2]。</p>
-                    </div>
-                </div>
-                <div class="flex gap-3" id="spot-5c">
-                    <div class="flex flex-col items-center"><div class="w-3 h-3 rounded-full bg-amber-500 mt-1.5"></div></div>
-                    <div class="flex-1">
-                        <div class="flex items-center justify-between">
-                            <span class="spot-type text-xs font-medium px-2 py-0.5 rounded bg-amber-50 text-amber-600 border border-amber-100">酒店</span>
-                            <button onclick="openEditModal('spot-5c')" class="text-xs bg-gray-100 hover:bg-gray-200 text-gray-500 px-2 py-1 rounded-full transition-all"><i class="fa-solid fa-pen-to-square mr-1"></i>編輯</button>
-                        </div>
-                        <h3 class="spot-title font-bold text-base mt-1">拉薩殊勝·歸藏莊園/同級</h3>
-                        <p class="spot-desc text-sm text-gray-500 mt-0.5">續住高級供氧加濕酒店，確保良好睡眠[cite: 2]。</p>
-                    </div>
+                <div class="bg-blue-50/50 rounded-2xl p-3 text-xs text-slate-600 space-y-1">
+                    <p>👗 <b>建議穿著：</b> 薄毛衣或針織衫＋防風外套，拉薩室內外有溫差，注意頭部保暖。</p>
+                    <p>☀️ <b>天氣提示：</b> 紫外線強烈且空氣乾燥。陽光耀眼，請準備好護唇膏與墨鏡。</p>
                 </div>
             </div>
-            <div class="mt-4 pt-3 border-t bg-slate-50 rounded-2xl p-3 text-xs space-y-1">
-                <p class="font-semibold text-gray-600"><i class="fa-solid fa-shirt mr-1"></i> 建議穿著與天氣提示</p>
-                <p class="text-gray-500">進寺廟**嚴禁著短裙短褲、需脫帽摘墨鏡**[cite: 2]。拉薩紫外線強，注意防曬[cite: 2]。</p>
-            </div>
-        </section>
+        </div>
 
-        <!-- Day 4 -->
-        <section id="day4" class="bg-white rounded-[2rem] p-5 shadow-sm border border-gray-100">
-            <div class="flex items-center justify-between border-b pb-3 mb-4">
-                <div class="flex items-center gap-2">
-                    <span class="fuji-blue-bg text-white text-xs font-bold px-3 py-1 rounded-full">Day 4</span>
-                    <h2 class="font-bold text-lg">聖湖蔚藍與壯麗冰川</h2>
-                </div>
+        <div id="day3" class="space-y-3 scroll-mt-20">
+            <div class="flex items-center space-x-2">
+                <span class="bg-fuji-blue text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Day 3</span>
+                <h2 class="text-lg font-bold text-slate-800">拉薩經典 · 信仰之心</h2>
             </div>
-            <div class="space-y-6">
-                <div class="flex gap-3" id="spot-6">
-                    <div class="flex flex-col items-center"><div class="w-3 h-3 rounded-full bg-red-500 mt-1.5"></div><div class="w-0.5 h-full bg-gray-200 my-1"></div></div>
-                    <div class="flex-1">
-                        <div class="flex items-center justify-between">
-                            <span class="spot-type text-xs font-medium px-2 py-0.5 rounded bg-red-50 text-red-600 border border-red-100">景點</span>
-                            <button onclick="openEditModal('spot-6')" class="text-xs bg-gray-100 hover:bg-gray-200 text-gray-500 px-2 py-1 rounded-full transition-all"><i class="fa-solid fa-pen-to-square mr-1"></i>編輯</button>
+            <div class="bg-white rounded-3xl p-5 shadow-sm border border-slate-100 space-y-4">
+                <div class="border-l-2 border-slate-200 pl-4 space-y-4 relative">
+                    <div class="spot-card relative" data-id="spot-5">
+                        <button onclick="openEditModal('spot-5')" class="absolute top-0 right-0 text-slate-400 hover:text-[#3B7AAE] bg-slate-50 p-1.5 rounded-full"><i class="fa-solid fa-pen text-xs"></i></button>
+                        <div class="flex items-center space-x-2">
+                            <span class="tag-type bg-emerald-50 text-emerald-600 text-2xs px-2 py-0.5 rounded-md font-bold">景點</span>
+                            <h3 class="spot-title font-bold text-sm text-slate-800">布達拉宮</h3>
                         </div>
-                        <h3 class="spot-title font-bold text-base mt-1">羊卓雍措 (羊湖) & 卡若拉冰川</h3>
-                        <p class="spot-desc text-sm text-gray-500 mt-0.5">翻越山口近距離接觸「碧玉湖」羊湖（4441m），下午遠觀氣勢磅礴的卡若拉冰川[cite: 2]。</p>
-                        <div class="flex gap-2 mt-2"><span class="text-xs px-2 py-0.5 rounded-full bg-blue-50 text-blue-600">#必拍聖湖</span><span class="text-xs px-2 py-0.5 rounded-full bg-cyan-50 text-cyan-600">#卡若拉冰川</span></div>
+                        <p class="spot-desc text-xs text-slate-500 mt-1">參觀古代宮堡式建築群，珍藏歷代靈塔、壁畫、佛像。特別贈送布宮下午茶！</p>
+                        <div class="flex flex-wrap gap-1 mt-1">
+                            <span class="bg-red-50 text-red-500 text-3xs px-1.5 py-0.5 rounded font-bold">#必拍</span>
+                        </div>
+                    </div>
+                    <div class="spot-card relative pt-2" data-id="spot-6">
+                        <button onclick="openEditModal('spot-6')" class="absolute top-2 right-0 text-slate-400 hover:text-[#3B7AAE] bg-slate-50 p-1.5 rounded-full"><i class="fa-solid fa-pen text-xs"></i></button>
+                        <div class="flex items-center space-x-2">
+                            <span class="tag-type bg-emerald-50 text-emerald-600 text-2xs px-2 py-0.5 rounded-md font-bold">景點</span>
+                            <h3 class="spot-title font-bold text-sm text-slate-800">大昭寺與八廓街</h3>
+                        </div>
+                        <p class="spot-desc text-xs text-slate-500 mt-1">瞻仰文成公主入藏之釋迦牟尼12歲等身像，與藏民老百姓一同圍繞轉經。</p>
+                        <p class="text-2xs text-amber-600 mt-1"><i class="fa-solid fa-circle-exclamation mr-1"></i>進寺院請記得脫帽、摘墨鏡，不可觸摸佛像或吸煙。</p>
+                        <div class="text-2xs text-slate-400 mt-2 space-y-1 bg-slate-50 p-2.5 rounded-xl">
+                            <p>💡 <span class="tip-photo"><b>拍照小技巧：</b> 布宮最佳全景拍攝點在藥王山觀景台（50元人民幣背景同款）。八廓街適合街拍人文光影。</span></p>
+                            <p>🚗 <span class="tip-park"><b>停車＆加油：</b> 布宮周邊交通管制，旅遊車需停放在後方公有大客車停車場。</span></p>
+                        </div>
                     </div>
                 </div>
-                <div class="flex gap-3" id="spot-7">
-                    <div class="flex flex-col items-center"><div class="w-3 h-3 rounded-full bg-amber-500 mt-1.5"></div></div>
-                    <div class="flex-1">
-                        <div class="flex items-center justify-between">
-                            <span class="spot-type text-xs font-medium px-2 py-0.5 rounded bg-amber-50 text-amber-600 border border-amber-100">酒店</span>
-                            <button onclick="openEditModal('spot-7')" class="text-xs bg-gray-100 hover:bg-gray-200 text-gray-500 px-2 py-1 rounded-full transition-all"><i class="fa-solid fa-pen-to-square mr-1"></i>編輯</button>
-                        </div>
-                        <h3 class="spot-title font-bold text-base mt-1">日喀則舍里别院含氧酒店</h3>
-                        <p class="spot-desc text-sm text-gray-500 mt-0.5">途經江孜古堡後抵達日喀則[cite: 2]，升級入住含氧酒店休息[cite: 2]。</p>
-                    </div>
+                <div class="bg-blue-50/50 rounded-2xl p-3 text-xs text-slate-600 space-y-1">
+                    <p>👗 <b>建議穿著：</b> 進入寺廟嚴禁短褲短裙，請穿長袖上衣和長褲，可配戴亮色披肩拍照。</p>
+                    <p>☀️ <b>天氣提示：</b> 日照與強紫外線極強，防曬乳、遮陽帽必備，多補充水分。</p>
                 </div>
             </div>
-            <div class="mt-4 pt-3 border-t bg-slate-50 rounded-2xl p-3 text-xs space-y-1">
-                <p class="font-semibold text-gray-600"><i class="fa-solid fa-shirt mr-1"></i> 建議穿著與天氣提示</p>
-                <p class="text-gray-500">山口與冰川附近寒風強。**必須穿著衝鋒衣或羽絨服**[cite: 2]。</p>
-            </div>
-        </section>
+        </div>
 
-        <!-- Day 5 -->
-        <section id="day5" class="bg-white rounded-[2rem] p-5 shadow-sm border border-gray-100">
-            <div class="flex items-center justify-between border-b pb-3 mb-4">
-                <div class="flex items-center gap-2">
-                    <span class="fuji-blue-bg text-white text-xs font-bold px-3 py-1 rounded-full">Day 5</span>
-                    <h2 class="font-bold text-lg">遠征地球之巔・珠峰</h2>
-                </div>
+        <div id="day4" class="space-y-3 scroll-mt-20">
+            <div class="flex items-center space-x-2">
+                <span class="bg-fuji-blue text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Day 4</span>
+                <h2 class="text-lg font-bold text-slate-800">翻越山口 · 絕美聖湖</h2>
             </div>
-            <div class="space-y-6">
-                <div class="flex gap-3" id="spot-8">
-                    <div class="flex flex-col items-center"><div class="w-3 h-3 rounded-full bg-red-500 mt-1.5"></div><div class="w-0.5 h-full bg-gray-200 my-1"></div></div>
-                    <div class="flex-1">
-                        <div class="flex items-center justify-between">
-                            <span class="spot-type text-xs font-medium px-2 py-0.5 rounded bg-red-50 text-red-600 border border-red-100">景點</span>
-                            <button onclick="openEditModal('spot-8')" class="text-xs bg-gray-100 hover:bg-gray-200 text-gray-500 px-2 py-1 rounded-full transition-all"><i class="fa-solid fa-pen-to-square mr-1"></i>編輯</button>
+            <div class="bg-white rounded-3xl p-5 shadow-sm border border-slate-100 space-y-4">
+                <div class="border-l-2 border-slate-200 pl-4 space-y-4 relative">
+                    <div class="spot-card relative" data-id="spot-7">
+                        <button onclick="openEditModal('spot-7')" class="absolute top-0 right-0 text-slate-400 hover:text-[#3B7AAE] bg-slate-50 p-1.5 rounded-full"><i class="fa-solid fa-pen text-xs"></i></button>
+                        <div class="flex items-center space-x-2">
+                            <span class="tag-type bg-emerald-50 text-emerald-600 text-2xs px-2 py-0.5 rounded-md font-bold">景點</span>
+                            <h3 class="spot-title font-bold text-sm text-slate-800">羊卓雍措 (羊湖)</h3>
                         </div>
-                        <h3 class="spot-title font-bold text-base mt-1">嘉措拉雪山 (5220m) & 絨布寺</h3>
-                        <p class="spot-desc text-sm text-gray-500 mt-0.5">翻越 5220m 雪山山口遠眺珠峰[cite: 2]。在最高的寺廟絨布寺南望仰望珠峰最佳位置[cite: 2]。</p>
+                        <p class="spot-desc text-xs text-slate-500 mt-1">湖面海拔4441米，三大聖湖之一。湛藍湖水與雪山連為一體，如翠玉明珠。</p>
+                        <div class="flex flex-wrap gap-1 mt-1">
+                            <span class="bg-red-50 text-red-500 text-3xs px-1.5 py-0.5 rounded font-bold">#必拍</span>
+                        </div>
+                    </div>
+                    <div class="spot-card relative pt-2" data-id="spot-8">
+                        <button onclick="openEditModal('spot-8')" class="absolute top-2 right-0 text-slate-400 hover:text-[#3B7AAE] bg-slate-50 p-1.5 rounded-full"><i class="fa-solid fa-pen text-xs"></i></button>
+                        <div class="flex items-center space-x-2">
+                            <span class="tag-type bg-emerald-50 text-emerald-600 text-2xs px-2 py-0.5 rounded-md font-bold">景點</span>
+                            <h3 class="spot-title font-bold text-sm text-slate-800">卡若拉冰川 & 江孜古堡</h3>
+                        </div>
+                        <p class="spot-desc text-xs text-slate-500 mt-1">近距離觀賞巍峨壯觀的冰川容顏，遠眺英雄城江孜古堡，隨後抵達後藏重鎮日喀則。</p>
+                        <div class="text-2xs text-slate-400 mt-2 space-y-1 bg-slate-50 p-2.5 rounded-xl">
+                            <p>💡 <span class="tip-photo"><b>拍照小技巧：</b> 在崗巴拉山口俯瞰羊湖緞帶全景最震撼；卡若拉冰川巨大冰舌就在路邊，適合直幅仰拍。</span></p>
+                            <p>🚗 <span class="tip-park"><b>停車＆加油：</b> 羊湖及冰川景區皆有大型觀景停車場；途中浪卡子縣可供車輛加油。</span></p>
+                        </div>
                     </div>
                 </div>
-                <div class="flex gap-3" id="spot-9">
-                    <div class="flex flex-col items-center"><div class="w-3 h-3 rounded-full bg-amber-500 mt-1.5"></div></div>
-                    <div class="flex-1">
-                        <div class="flex items-center justify-between">
-                            <span class="spot-type text-xs font-medium px-2 py-0.5 rounded bg-amber-50 text-amber-600 border border-amber-100">酒店</span>
-                            <button onclick="openEditModal('spot-9')" class="text-xs bg-gray-100 hover:bg-gray-200 text-gray-500 px-2 py-1 rounded-full transition-all"><i class="fa-solid fa-pen-to-square mr-1"></i>編輯</button>
-                        </div>
-                        <h3 class="spot-title font-bold text-base mt-1">珠峰大本營 (5200m) 絨布寺供氧酒店</h3>
-                        <p class="spot-desc text-sm text-gray-500 mt-0.5">乘環保車抵達大本營與世界最高峰共舞[cite: 2]，夜宿供氧酒店，好天氣可觀賞星辰銀河[cite: 2]。</p>
-                        <div class="flex gap-2 mt-2"><span class="text-xs px-2 py-0.5 rounded-full bg-red-50 text-red-600">#必拍珠峰</span><span class="text-xs px-2 py-0.5 rounded-full bg-indigo-50 text-indigo-600">#銀河觀星</span></div>
-                    </div>
+                <div class="bg-blue-50/50 rounded-2xl p-3 text-xs text-slate-600 space-y-1">
+                    <p>👗 <b>建議穿著：</b> 山口高海拔埡口強風且冷，務必穿著三合一衝鋒衣（保暖內膽）或羽絨服，戴好帽子防頭痛。</p>
+                    <p>☀️ <b>天氣提示：</b> 高海拔埡口氣候瞬息萬變，體感溫度比拉薩市區低 5-10 度，防風是核心。</p>
                 </div>
             </div>
-            <div class="mt-4 pt-3 border-t bg-slate-50 rounded-2xl p-3 text-xs space-y-1">
-                <p class="font-semibold text-gray-600"><i class="fa-solid fa-shirt mr-1"></i> 建議穿著與天氣提示</p>
-                <p class="text-gray-500">大本營極度寒冷。**務必穿著厚羽絨服、毛帽、手套圍巾**[cite: 2]。</p>
-            </div>
-        </section>
+        </div>
 
-        <!-- Day 6 -->
-        <section id="day6" class="bg-white rounded-[2rem] p-5 shadow-sm border border-gray-100">
-            <div class="flex items-center justify-between border-b pb-3 mb-4">
-                <div class="flex items-center gap-2">
-                    <span class="fuji-blue-bg text-white text-xs font-bold px-3 py-1 rounded-full">Day 6</span>
-                    <h2 class="font-bold text-lg">告別峰頂・返回後藏</h2>
-                </div>
+        <div id="day5" class="space-y-3 scroll-mt-20">
+            <div class="flex items-center space-x-2">
+                <span class="bg-fuji-blue text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Day 5</span>
+                <h2 class="text-lg font-bold text-slate-800">征服地球之巔 · 星河入夢</h2>
             </div>
-            <div class="space-y-6">
-                <div class="flex gap-3" id="spot-10">
-                    <div class="flex flex-col items-center"><div class="w-3 h-3 rounded-full bg-green-500 mt-1.5"></div><div class="w-0.5 h-full bg-gray-200 my-1"></div></div>
-                    <div class="flex-1">
-                        <div class="flex items-center justify-between">
-                            <span class="spot-type text-xs font-medium px-2 py-0.5 rounded bg-green-50 text-green-600 border border-green-100">活動</span>
-                            <button onclick="openEditModal('spot-10')" class="text-xs bg-gray-100 hover:bg-gray-200 text-gray-500 px-2 py-1 rounded-full transition-all"><i class="fa-solid fa-pen-to-square mr-1"></i>編輯</button>
+            <div class="bg-white rounded-3xl p-5 shadow-sm border border-slate-100 space-y-4">
+                <div class="border-l-2 border-slate-200 pl-4 space-y-4 relative">
+                    <div class="spot-card relative" data-id="spot-9">
+                        <button onclick="openEditModal('spot-9')" class="absolute top-0 right-0 text-slate-400 hover:text-[#3B7AAE] bg-slate-50 p-1.5 rounded-full"><i class="fa-solid fa-pen text-xs"></i></button>
+                        <div class="flex items-center space-x-2">
+                            <span class="tag-type bg-blue-50 text-[#3B7AAE] text-2xs px-2 py-0.5 rounded-md font-bold">交通</span>
+                            <h3 class="spot-title font-bold text-sm text-slate-800">日喀則 － 定日 － 珠峰大本營</h3>
                         </div>
-                        <h3 class="spot-title font-bold text-base mt-1">清晨仰望珠峰晨曦</h3>
-                        <p class="spot-desc text-sm text-gray-500 mt-0.5">迎著晨光欣賞一派聖潔景象，下午帶著對珠峰的留戀返回日喀則[cite: 2]。</p>
+                        <p class="spot-desc text-xs text-slate-500 mt-1">翻越5220米嘉措拉雪山，前往絨布寺遠眺珠穆朗瑪峰，換乘環保車直達5200米大本營！</p>
+                    </div>
+                    <div class="spot-card relative pt-2" data-id="spot-10">
+                        <button onclick="openEditModal('spot-10')" class="absolute top-2 right-0 text-slate-400 hover:text-[#3B7AAE] bg-slate-50 p-1.5 rounded-full"><i class="fa-solid fa-pen text-xs"></i></button>
+                        <div class="flex items-center space-x-2">
+                            <span class="tag-type bg-amber-50 text-amber-600 text-2xs px-2 py-0.5 rounded-md font-bold">酒店</span>
+                            <h3 class="spot-title font-bold text-sm text-slate-800">珠峰大本營絨布寺供氧酒店</h3>
+                        </div>
+                        <p class="spot-desc text-xs text-slate-500 mt-1">夜宿世界最高富氧酒店，天氣好時可在窗外或院內觀賞璀璨星辰銀河。</p>
+                        <div class="flex flex-wrap gap-1 mt-1">
+                            <span class="bg-red-50 text-red-500 text-3xs px-1.5 py-0.5 rounded font-bold">#必拍銀河</span>
+                        </div>
+                        <div class="text-2xs text-slate-400 mt-2 space-y-1 bg-slate-50 p-2.5 rounded-xl">
+                            <p>💡 <span class="tip-photo"><b>拍照小技巧 :</b> 黃昏在絨布寺白塔旁拍日照金山。夜間用腳架、大光圈曝光 20 秒可捕捉銀河星空。</span></p>
+                            <p>🚗 <span class="tip-park"><b>停車＆加油 :</b> 私營/旅遊大客車需停在定日大車場換乘環保巴士；建議在新定日縣城加滿油箱再出發。</span></p>
+                        </div>
                     </div>
                 </div>
-                <div class="flex gap-3" id="spot-10b">
-                    <div class="flex flex-col items-center"><div class="w-3 h-3 rounded-full bg-amber-500 mt-1.5"></div></div>
-                    <div class="flex-1">
-                        <div class="flex items-center justify-between">
-                            <span class="spot-type text-xs font-medium px-2 py-0.5 rounded bg-amber-50 text-amber-600 border border-amber-100">酒店</span>
-                            <button onclick="openEditModal('spot-10b')" class="text-xs bg-gray-100 hover:bg-gray-200 text-gray-500 px-2 py-1 rounded-full transition-all"><i class="fa-solid fa-pen-to-square mr-1"></i>編輯</button>
-                        </div>
-                        <h3 class="spot-title font-bold text-base mt-1">日喀則舍里别院含氧酒店</h3>
-                        <p class="spot-desc text-sm text-gray-500 mt-0.5">入住含氧酒店，在宇宙的純與淨中好好放鬆靜養[cite: 2]。</p>
-                    </div>
+                <div class="bg-blue-50/50 rounded-2xl p-3 text-xs text-slate-600 space-y-1">
+                    <p>👑 <b>建議穿著：</b> <b>極寒低溫！</b> 必須穿著重磅厚羽絨服、保暖內衣褲、毛帽、手套，做好最萬全的禦寒措施。</p>
+                    <p>☀️ <b>天氣提示：</b> 珠峰地區晝夜溫差極大，夜間常突破零下，風力狂勁，建議隨身多備暖暖包。</p>
                 </div>
             </div>
-            <div class="mt-4 pt-3 border-t bg-slate-50 rounded-2xl p-3 text-xs space-y-1">
-                <p class="font-semibold text-gray-600"><i class="fa-solid fa-shirt mr-1"></i> 建議穿著與天氣提示</p>
-                <p class="text-gray-500">清晨仍需防寒，下午回到市區可換回輕便的常規防風外套[cite: 2]。</p>
-            </div>
-        </section>
+        </div>
 
-        <!-- Day 7 -->
-        <section id="day7" class="bg-white rounded-[2rem] p-5 shadow-sm border border-gray-100">
-            <div class="flex items-center justify-between border-b pb-3 mb-4">
-                <div class="flex items-center gap-2">
-                    <span class="fuji-blue-bg text-white text-xs font-bold px-3 py-1 rounded-full">Day 7</span>
-                    <h2 class="font-bold text-lg">後藏歷史聖地與河谷慢活</h2>
-                </div>
+        <div id="day6" class="space-y-3 scroll-mt-20">
+            <div class="flex items-center space-x-2">
+                <span class="bg-fuji-blue text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Day 6</span>
+                <h2 class="text-lg font-bold text-slate-800">告別世界之巔 · 返回後藏</h2>
             </div>
-            <div class="space-y-6">
-                <div class="flex gap-3" id="spot-11">
-                    <div class="flex flex-col items-center"><div class="w-3 h-3 rounded-full bg-red-500 mt-1.5"></div><div class="w-0.5 h-full bg-gray-200 my-1"></div></div>
-                    <div class="flex-1">
-                        <div class="flex items-center justify-between">
-                            <span class="spot-type text-xs font-medium px-2 py-0.5 rounded bg-red-50 text-red-600 border border-red-100">景點</span>
-                            <button onclick="openEditModal('spot-11')" class="text-xs bg-gray-100 hover:bg-gray-200 text-gray-500 px-2 py-1 rounded-full transition-all"><i class="fa-solid fa-pen-to-square mr-1"></i>編輯</button>
+            <div class="bg-white rounded-3xl p-5 shadow-sm border border-slate-100 space-y-4">
+                <div class="border-l-2 border-slate-200 pl-4 space-y-4 relative">
+                    <div class="spot-card relative" data-id="spot-11">
+                        <button onclick="openEditModal('spot-11')" class="absolute top-0 right-0 text-slate-400 hover:text-[#3B7AAE] bg-slate-50 p-1.5 rounded-full"><i class="fa-solid fa-pen text-xs"></i></button>
+                        <div class="flex items-center space-x-2">
+                            <span class="tag-type bg-emerald-50 text-emerald-600 text-2xs px-2 py-0.5 rounded-md font-bold">景點</span>
+                            <h3 class="spot-title font-bold text-sm text-slate-800">珠峰晨曦 · 喜馬拉雅山脈</h3>
                         </div>
-                        <h3 class="spot-title font-bold text-base mt-1">扎什倫布寺 (含藏裝/家紡體驗)</h3>
-                        <p class="spot-desc text-sm text-gray-500 mt-0.5">參觀黃教六大寺之一扎什倫布寺，瞻仰世界上最大的銅坐佛「強巴佛」[cite: 2]。</p>
-                        <div class="flex gap-2 mt-2"><span class="text-xs px-2 py-0.5 rounded-full bg-orange-50 text-orange-600">#精緻藏裝體驗</span></div>
+                        <p class="spot-desc text-xs text-slate-500 mt-1">清晨迎著朝陽再次仰望聖潔珠峰，感受宇宙的純淨與人類的渺小，隨後返回日喀則。</p>
+                        <div class="text-2xs text-slate-400 mt-2 space-y-1 bg-slate-50 p-2.5 rounded-xl">
+                            <p>💡 <span class="tip-photo"><b>拍照小技巧：</b> 早晨陽光剛照亮峰頂時，用長焦拉近可以拍到最純淨無瑕的銀白雪峰線條。</span></p>
+                            <p>🚗 <span class="tip-park"><b>停車＆加油：</b> 返程途中在拉孜或新定日小鎮短暫休息，鎮上有中國石油加油站。</span></p>
+                        </div>
                     </div>
                 </div>
-                <div class="flex gap-3" id="spot-12">
-                    <div class="flex flex-col items-center"><div class="w-3 h-3 rounded-full bg-red-500 mt-1.5"></div><div class="w-0.5 h-full bg-gray-200 my-1"></div></div>
-                    <div class="flex-1">
-                        <div class="flex items-center justify-between">
-                            <span class="spot-type text-xs font-medium px-2 py-0.5 rounded bg-red-50 text-red-600 border border-red-100">景點</span>
-                            <button onclick="openEditModal('spot-12')" class="text-xs bg-gray-100 hover:bg-gray-200 text-gray-500 px-2 py-1 rounded-full transition-all"><i class="fa-solid fa-pen-to-square mr-1"></i>編輯</button>
-                        </div>
-                        <h3 class="spot-title font-bold text-base mt-1">雅礱河谷風光返回拉薩</h3>
-                        <p class="spot-desc text-sm text-gray-500 mt-0.5">慢下來，在雅礱河谷停下，讓一切目光可及之物都掩映在透明天空藍裡[cite: 2]。</p>
-                    </div>
-                </div>
-                <div class="flex gap-3" id="spot-12c">
-                    <div class="flex flex-col items-center"><div class="w-3 h-3 rounded-full bg-amber-500 mt-1.5"></div></div>
-                    <div class="flex-1">
-                        <div class="flex items-center justify-between">
-                            <span class="spot-type text-xs font-medium px-2 py-0.5 rounded bg-amber-50 text-amber-600 border border-amber-100">酒店</span>
-                            <button onclick="openEditModal('spot-12c')" class="text-xs bg-gray-100 hover:bg-gray-200 text-gray-500 px-2 py-1 rounded-full transition-all"><i class="fa-solid fa-pen-to-square mr-1"></i>編輯</button>
-                        </div>
-                        <h3 class="spot-title font-bold text-base mt-1">拉薩殊勝·歸藏莊園/同級</h3>
-                        <p class="spot-desc text-sm text-gray-500 mt-0.5">回到舒適的拉薩富氧酒店休息[cite: 2]。</p>
-                    </div>
+                <div class="bg-blue-50/50 rounded-2xl p-3 text-xs text-slate-600 space-y-1">
+                    <p>👗 <b>建議穿著：</b> 早晨大本營氣溫極低仍需著厚羽絨；下午回到日喀則可換回三合一衝鋒外套。</p>
+                    <p>☀️ <b>天氣提示：</b> 早晨易有低溫晨霧，中午回程路上紫外線回升，車內記得適度開窗通風。</p>
                 </div>
             </div>
-            <div class="mt-4 pt-3 border-t bg-slate-50 rounded-2xl p-3 text-xs space-y-1">
-                <p class="font-semibold text-gray-600"><i class="fa-solid fa-shirt mr-1"></i> 建議穿著與天氣提示</p>
-                <p class="text-gray-500">適合安排拍攝。建議穿素色好搭配藏裝的舒適內著衣物。</p>
-            </div>
-        </section>
+        </div>
 
-        <!-- Day 8 -->
-        <section id="day8" class="bg-white rounded-[2rem] p-5 shadow-sm border border-gray-100">
-            <div class="flex items-center justify-between border-b pb-3 mb-4">
-                <div class="flex items-center gap-2">
-                    <span class="fuji-blue-bg text-white text-xs font-bold px-3 py-1 rounded-full">Day 8</span>
-                    <h2 class="font-bold text-lg">草原風光與天湖之鏡</h2>
-                </div>
+        <div id="day7" class="space-y-3 scroll-mt-20">
+            <div class="flex items-center space-x-2">
+                <span class="bg-fuji-blue text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Day 7</span>
+                <h2 class="text-lg font-bold text-slate-800">後藏重鎮 · 慢行河谷</h2>
             </div>
-            <div class="space-y-6">
-                <div class="flex gap-3" id="spot-13">
-                    <div class="flex flex-col items-center"><div class="w-3 h-3 rounded-full bg-red-500 mt-1.5"></div><div class="w-0.5 h-full bg-gray-200 my-1"></div></div>
-                    <div class="flex-1">
-                        <div class="flex items-center justify-between">
-                            <span class="spot-type text-xs font-medium px-2 py-0.5 rounded bg-red-50 text-red-600 border border-red-100">景點</span>
-                            <button onclick="openEditModal('spot-13')" class="text-xs bg-gray-100 hover:bg-gray-200 text-gray-500 px-2 py-1 rounded-full transition-all"><i class="fa-solid fa-pen-to-square mr-1"></i>編輯</button>
+            <div class="bg-white rounded-3xl p-5 shadow-sm border border-slate-100 space-y-4">
+                <div class="border-l-2 border-slate-200 pl-4 space-y-4 relative">
+                    <div class="spot-card relative" data-id="spot-12">
+                        <button onclick="openEditModal('spot-12')" class="absolute top-0 right-0 text-slate-400 hover:text-[#3B7AAE] bg-slate-50 p-1.5 rounded-full"><i class="fa-solid fa-pen text-xs"></i></button>
+                        <div class="flex items-center space-x-2">
+                            <span class="tag-type bg-emerald-50 text-emerald-600 text-2xs px-2 py-0.5 rounded-md font-bold">景點</span>
+                            <h3 class="spot-title font-bold text-sm text-slate-800">扎什倫布寺</h3>
                         </div>
-                        <h3 class="spot-title font-bold text-base mt-1">藏北大草原 & 那根拉山口 (5190m)</h3>
-                        <p class="spot-desc text-sm text-gray-500 mt-0.5">沿途觀賞那曲河、藏北大草原、青藏公路、念青唐古拉主峰，翻越超高海拔山口[cite: 2]。</p>
+                        <p class="spot-desc text-xs text-slate-500 mt-1">黃教六大寺之一、歷代班禪駐地。瞻仰 28 米高世界上最大的銅坐佛「強巴佛」。</p>
+                        <div class="flex flex-wrap gap-1 mt-1">
+                            <span class="bg-amber-50 text-amber-600 text-3xs px-1.5 py-0.5 rounded font-bold">#藏裝體驗</span>
+                        </div>
+                    </div>
+                    <div class="spot-card relative pt-2" data-id="spot-13">
+                        <button onclick="openEditModal('spot-13')" class="absolute top-2 right-0 text-slate-400 hover:text-[#3B7AAE] bg-slate-50 p-1.5 rounded-full"><i class="fa-solid fa-pen text-xs"></i></button>
+                        <div class="flex items-center space-x-2">
+                            <span class="tag-type bg-emerald-50 text-emerald-600 text-2xs px-2 py-0.5 rounded-md font-bold">景點</span>
+                            <h3 class="spot-title font-bold text-sm text-slate-800">雅礱河谷風光 － 返回拉薩</h3>
+                        </div>
+                        <p class="spot-desc text-xs text-slate-500 mt-1">返程慢行，在西藏文明搖籃裡靜靜佇立，河川冰山與牧場在水晶藍天下一覽無遺。</p>
+                        <div class="text-2xs text-slate-400 mt-2 space-y-1 bg-slate-50 p-2.5 rounded-xl">
+                            <p>💡 <span class="tip-photo"><b>拍照小技巧：</b> 扎寺經典的紅牆與白牆是藏裝旅拍的完美背景，利用牆面側光拍出歷史斑駁感。</span></p>
+                            <p>🚗 <span class="tip-park"><b>停車＆加油：</b> 扎什倫布寺景區正門前設有大型收費停車場；日喀則市區各大品牌加油站林立。</span></p>
+                        </div>
                     </div>
                 </div>
-                <div class="flex gap-3" id="spot-14">
-                    <div class="flex flex-col items-center"><div class="w-3 h-3 rounded-full bg-red-500 mt-1.5"></div><div class="w-0.5 h-full bg-gray-200 my-1"></div></div>
-                    <div class="flex-1">
-                        <div class="flex items-center justify-between">
-                            <span class="spot-type text-xs font-medium px-2 py-0.5 rounded bg-red-50 text-red-600 border border-red-100">景點</span>
-                            <button onclick="openEditModal('spot-14')" class="text-xs bg-gray-100 hover:bg-gray-200 text-gray-500 px-2 py-1 rounded-full transition-all"><i class="fa-solid fa-pen-to-square mr-1"></i>編輯</button>
-                        </div>
-                        <h3 class="spot-title font-bold text-base mt-1">天湖納木錯 (4718m)</h3>
-                        <p class="spot-desc text-sm text-gray-500 mt-0.5">晶瑩明珠般的最高鹹水湖，清澈壯觀[cite: 2]。下午返程領略藏北草原風光回拉薩[cite: 2]。</p>
-                        <div class="flex gap-2 mt-2"><span class="text-xs px-2 py-0.5 rounded-full bg-blue-50 text-blue-600">#必拍天湖</span></div>
-                    </div>
-                </div>
-                <div class="flex gap-3" id="spot-14c">
-                    <div class="flex flex-col items-center"><div class="w-3 h-3 rounded-full bg-amber-500 mt-1.5"></div></div>
-                    <div class="flex-1">
-                        <div class="flex items-center justify-between">
-                            <span class="spot-type text-xs font-medium px-2 py-0.5 rounded bg-amber-50 text-amber-600 border border-amber-100">酒店</span>
-                            <button onclick="openEditModal('spot-14c')" class="text-xs bg-gray-100 hover:bg-gray-200 text-gray-500 px-2 py-1 rounded-full transition-all"><i class="fa-solid fa-pen-to-square mr-1"></i>編輯</button>
-                        </div>
-                        <h3 class="spot-title font-bold text-base mt-1">拉薩殊勝·歸藏莊園/同級</h3>
-                        <p class="spot-desc text-sm text-gray-500 mt-0.5">最後一晚入住拉薩供氧酒店[cite: 2]。</p>
-                    </div>
+                <div class="bg-blue-50/50 rounded-2xl p-3 text-xs text-slate-600 space-y-1">
+                    <p>👗 <b>建議穿著：</b> 長袖襯衫或薄毛衣搭防風外套。若有預約藏裝外拍，建議內著便於穿脫的輕便衣物。</p>
+                    <p>☀️ <b>天氣提示：</b> 日喀則回拉薩沿線氣候相對和煦、晴朗，紫外線強烈，建議戴上寬簷太陽帽。</p>
                 </div>
             </div>
-            <div class="mt-4 pt-3 border-t bg-slate-50 rounded-2xl p-3 text-xs space-y-1">
-                <p class="font-semibold text-gray-600"><i class="fa-solid fa-shirt mr-1"></i> 建議穿著與天氣提示</p>
-                <p class="text-gray-500">天湖邊寒風強。**需穿著高防風衝鋒衣、配戴防風帽與圍巾**[cite: 2]。</p>
-            </div>
-        </section>
+        </div>
 
-        <!-- Day 9 -->
-        <section id="day9" class="bg-white rounded-[2rem] p-5 shadow-sm border border-gray-100">
-            <div class="flex items-center justify-between border-b pb-3 mb-4">
-                <div class="flex items-center gap-2">
-                    <span class="fuji-blue-bg text-white text-xs font-bold px-3 py-1 rounded-full">Day 9</span>
-                    <h2 class="font-bold text-lg">依依不捨・重回溫馨之家</h2>
-                </div>
+        <div id="day8" class="space-y-3 scroll-mt-20">
+            <div class="flex items-center space-x-2">
+                <span class="bg-fuji-blue text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Day 8</span>
+                <h2 class="text-lg font-bold text-slate-800">北行草原 · 遇見天湖</h2>
             </div>
-            <div class="space-y-4">
-                <div class="flex gap-3" id="spot-15">
-                    <div class="flex flex-col items-center"><div class="w-3 h-3 rounded-full bg-blue-500 mt-1.5"></div></div>
-                    <div class="flex-1">
-                        <div class="flex items-center justify-between">
-                            <span class="spot-type text-xs font-medium px-2 py-0.5 rounded bg-blue-50 text-blue-600 border border-blue-100">交通</span>
-                            <button onclick="openEditModal('spot-15')" class="text-xs bg-gray-100 hover:bg-gray-200 text-gray-500 px-2 py-1 rounded-full transition-all"><i class="fa-solid fa-pen-to-square mr-1"></i>編輯</button>
+            <div class="bg-white rounded-3xl p-5 shadow-sm border border-slate-100 space-y-4">
+                <div class="border-l-2 border-slate-200 pl-4 space-y-4 relative">
+                    <div class="spot-card relative" data-id="spot-14">
+                        <button onclick="openEditModal('spot-14')" class="absolute top-0 right-0 text-slate-400 hover:text-[#3B7AAE] bg-slate-50 p-1.5 rounded-full"><i class="fa-solid fa-pen text-xs"></i></button>
+                        <div class="flex items-center space-x-2">
+                            <span class="tag-type bg-emerald-50 text-emerald-600 text-2xs px-2 py-0.5 rounded-md font-bold">景點</span>
+                            <h3 class="spot-title font-bold text-sm text-slate-800">納木錯 (天湖)</h3>
                         </div>
-                        <h3 class="spot-title font-bold text-base mt-1">拉薩專車送機 / 送站</h3>
-                        <p class="spot-desc text-sm text-gray-500 mt-0.5">享用完豐富早餐，根據火車票或機票送往機場或火車站，返回溫馨的家[cite: 2]。</p>
-                        <div class="bg-blue-50/50 rounded-xl p-2 mt-2 text-xs text-blue-800 space-y-1">
-                            <p><strong>🚗 交通資訊：</strong> 至貢嘎機場約60公里(車程1h)[cite: 2]。</p>
+                        <p class="spot-desc text-xs text-slate-500 mt-1">沿途觀賞那曲河、藏北大草原、念青唐古拉主峰，翻越5190米那根拉山口，擁抱海拔4718米的世界最高鹹水湖。</p>
+                        <div class="flex flex-wrap gap-1 mt-1">
+                            <span class="bg-red-50 text-red-500 text-3xs px-1.5 py-0.5 rounded font-bold">#必拍</span>
+                        </div>
+                        <div class="text-2xs text-slate-400 mt-2 space-y-1 bg-slate-50 p-2.5 rounded-xl">
+                            <p>💡 <span class="tip-photo"><b>拍照小技巧：</b> 在那根拉山口能捕捉遠處天湖的第一抹碧藍；納木錯湖畔可以找彩色經幡或氛牛做生動前景。</span></p>
+                            <p>🚗 <span class="tip-park"><b>停車＆加油：</b> 行程需在當雄遊客中心停車，並統一換乘景區觀光專車；當雄縣城青藏公路旁加油極方便。</span></p>
                         </div>
                     </div>
                 </div>
+                <div class="bg-blue-50/50 rounded-2xl p-3 text-xs text-slate-600 space-y-1">
+                    <p>👗 <b>建議穿著：</b> 納木錯海拔極高、湖風強勁刺骨，請務必重新換上冬裝毛衣或防風保暖羽絨服，做好頭部防風。</p>
+                    <p>☀️ <b>天氣提示：</b> 藏北草原與湖邊氣候多變，偶有陣雨或強風，建議隨身攜帶輕便雨衣以備不時之需。</p>
+                </div>
             </div>
-        </section>
+        </div>
+
+        <div id="day9" class="space-y-3 scroll-mt-20">
+            <div class="flex items-center space-x-2">
+                <span class="bg-fuji-blue text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Day 9</span>
+                <h2 class="text-lg font-bold text-slate-800">珍重再見 · 告別藏地</h2>
+            </div>
+            <div class="bg-white rounded-3xl p-5 shadow-sm border border-slate-100 space-y-4">
+                <div class="border-l-2 border-slate-200 pl-4 space-y-4 relative">
+                    <div class="spot-card relative" data-id="spot-15">
+                        <button onclick="openEditModal('spot-15')" class="absolute top-0 right-0 text-slate-400 hover:text-[#3B7AAE] bg-slate-50 p-1.5 rounded-full"><i class="fa-solid fa-pen text-xs"></i></button>
+                        <div class="flex items-center space-x-2">
+                            <span class="tag-type bg-blue-50 text-[#3B7AAE] text-2xs px-2 py-0.5 rounded-md font-bold">交通</span>
+                            <h3 class="spot-title font-bold text-sm text-slate-800">拉薩送機 / 送站</h3>
+                        </div>
+                        <p class="spot-desc text-xs text-slate-500 mt-1">根據團友返程火車或機票時間，專車送往機場（60KM，車程1小時）或火車站（15KM），愉快的西藏之旅圓滿結束！</p>
+                    </div>
+                </div>
+                <div class="bg-blue-50/50 rounded-2xl p-3 text-xs text-slate-600 space-y-1">
+                    <p>👗 <b>建議穿著：</b> 適合搭機的舒適休閒服裝。厚外套可先收進行李托運，隨身帶一件薄外套應付機艙冷氣即可。</p>
+                    <p>☀️ <b>天氣提示：</b> 告別日光之城，帶著滿滿的虔誠信仰與美好回憶返回溫馨的家。</p>
+                </div>
+            </div>
+        </div>
 
     </main>
 
-    <!-- 行程編輯彈窗 (Modal) -->
-    <div id="editModal" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-end justify-center hidden transition-opacity duration-300">
-        <div class="bg-white w-full max-w-md rounded-t-[2.5rem] p-6 space-y-4 shadow-2xl transform translate-y-full transition-transform duration-300" id="modalContainer">
-            <div class="flex justify-between items-center border-b pb-3">
-                <h3 class="text-lg font-bold text-gray-800"><i class="fa-solid fa-sliders fuji-blue-text mr-2"></i>調整行程設定</h3>
-                <button onclick="closeEditModal()" class="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center text-gray-500"><i class="fa-solid fa-xmark"></i></button>
+    <div class="fixed bottom-24 right-6 z-50">
+        <button onclick="openBillModal()" class="bg-amber-500 hover:bg-amber-600 text-white w-14 h-14 rounded-full shadow-xl flex items-center justify-center transition-transform active:scale-90">
+            <i class="fa-solid fa-calculator text-xl"></i>
+        </button>
+    </div>
+
+    <nav class="fixed bottom-6 left-1/2 -translate-x-1/2 bg-white/95 backdrop-blur-lg border border-slate-100 px-4 py-3 rounded-full shadow-xl flex items-center space-x-4 z-40 w-[92%] max-w-sm justify-around">
+        <a href="#day1" class="flex flex-col items-center text-slate-400 hover:text-[#3B7AAE]">
+            <i class="fa-solid fa-plane text-xs"></i>
+            <span class="text-[9px] mt-0.5">D1啟程</span>
+        </a>
+        <a href="#day3" class="flex flex-col items-center text-slate-400 hover:text-[#3B7AAE]">
+            <i class="fa-solid fa-gopuram text-xs"></i>
+            <span class="text-[9px] mt-0.5">D3布宮</span>
+        </a>
+        <a href="#day5" class="flex flex-col items-center bg-[#3B7AAE] text-white p-2.5 rounded-full -mt-5 shadow-md">
+            <i class="fa-solid fa-mountain text-base"></i>
+        </a>
+        <a href="#day7" class="flex flex-col items-center text-slate-400 hover:text-[#3B7AAE]">
+            <i class="fa-solid fa-map-location-dot text-xs"></i>
+            <span class="text-[9px] mt-0.5">D7扎寺</span>
+        </a>
+        <a href="#day8" class="flex flex-col items-center text-slate-400 hover:text-[#3B7AAE]">
+            <i class="fa-solid fa-water text-xs"></i>
+            <span class="text-[9px] mt-0.5">D8天湖</span>
+        </a>
+    </nav>
+
+
+    <div id="editModal" class="fixed inset-0 bg-black/40 backdrop-blur-sm z-50 hidden flex items-end justify-center p-4">
+        <div class="bg-white w-full max-w-md rounded-t-3xl rounded-b-xl p-6 space-y-4 shadow-2xl">
+            <div class="flex justify-between items-center border-b border-slate-100 pb-2">
+                <h3 class="text-sm font-bold text-slate-800"><i class="fa-solid fa-gear fuji-blue mr-1"></i> 修改行程項目</h3>
+                <button onclick="closeEditModal()" class="text-slate-400 text-lg"><i class="fa-solid fa-xmark"></i></button>
             </div>
-            <input type="hidden" id="editSpotId">
-            <div class="space-y-1">
-                <label class="text-xs font-bold text-gray-500 block">景點分類</label>
-                <select id="editType" class="w-full bg-gray-50 border border-gray-200 rounded-2xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#3B7AAE]">
-                    <option value="景點">📍 景點</option>
-                    <option value="交通">🚗 交通</option>
-                    <option value="酒店">🏨 酒店</option>
-                    <option value="食物">🍜 食物</option>
-                    <option value="購物">🛍️ 購物</option>
-                    <option value="活動">🎉 活動</option>
-                </select>
+            <input type="hidden" id="currentSpotId">
+            <div class="space-y-3">
+                <div>
+                    <label class="block text-2xs font-bold text-slate-400 mb-0.5">景點/地點名稱</label>
+                    <input type="text" id="inputTitle" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-xs focus:outline-none focus:border-[#3B7AAE]">
+                </div>
+                <div>
+                    <label class="block text-2xs font-bold text-slate-400 mb-0.5">分類標籤</label>
+                    <input type="text" id="inputType" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-xs focus:outline-none focus:border-[#3B7AAE]">
+                </div>
+                <div>
+                    <label class="block text-2xs font-bold text-slate-400 mb-0.5">內容描述</label>
+                    <textarea id="inputDesc" rows="2" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-xs focus:outline-none focus:border-[#3B7AAE]"></textarea>
+                </div>
             </div>
-            <div class="space-y-1">
-                <label class="text-xs font-bold text-gray-500 block">行程/景點名稱</label>
-                <input type="text" id="editTitle" class="w-full bg-gray-50 border border-gray-200 rounded-2xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#3B7AAE]">
-            </div>
-            <div class="space-y-1">
-                <label class="text-xs font-bold text-gray-500 block">詳細行程說明</label>
-                <textarea id="editDesc" rows="3" class="w-full bg-gray-50 border border-gray-200 rounded-2xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#3B7AAE]"></textarea>
-            </div>
-            <div class="pt-2">
-                <button onclick="saveSpotChange()" class="w-full fuji-blue-bg text-white font-medium py-3 rounded-full shadow-lg hover:bg-opacity-90 transition-all"><i class="fa-solid fa-check mr-1"></i>儲存並更新行程</button>
+            <div class="pt-2 flex space-x-2">
+                <button onclick="closeEditModal()" class="flex-1 bg-slate-100 text-slate-600 text-xs py-2 rounded-xl">取消</button>
+                <button onclick="saveChanges()" class="flex-1 bg-fuji-blue text-white text-xs py-2 rounded-xl">更新儲存</button>
             </div>
         </div>
     </div>
 
-    <!-- 記帳與分帳小幫手彈窗 (Modal) -->
-    <div id="accountingModal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-end justify-center hidden transition-opacity duration-300">
-        <div class="bg-white w-full max-w-md rounded-t-[2.5rem] flex flex-col shadow-2xl transform translate-y-full transition-transform duration-300 max-h-[90vh]" id="accountingContainer">
+
+    <div id="billModal" class="fixed inset-0 bg-black/40 backdrop-blur-sm z-50 hidden flex items-end justify-center">
+        <div class="bg-white w-full max-w-md h-[85vh] rounded-t-3xl p-6 flex flex-col justify-between shadow-2xl overflow-hidden">
             
-            <div class="p-6 border-b flex justify-between items-center bg-slate-50 rounded-t-[2.5rem]">
-                <h3 class="text-lg font-bold text-gray-800"><i class="fa-solid fa-sack-dollar text-amber-500 mr-2"></i>分帳小幫手</h3>
-                <button onclick="closeAccountingModal()" class="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center text-gray-500"><i class="fa-solid fa-xmark"></i></button>
+            <div class="flex justify-between items-center border-b border-slate-100 pb-3 flex-shrink-0">
+                <div>
+                    <h3 class="text-base font-bold text-slate-800"><i class="fa-solid fa-wallet text-amber-500 mr-1"></i> 西藏團友記帳本</h3>
+                    <p class="text-2xs text-slate-400 mt-0.5">Eva,Maya,Celine,Joanne,Yiming,Chloe,Boy 七人分帳</p>
+                </div>
+                <button onclick="closeBillModal()" class="text-slate-400 bg-slate-50 w-8 h-8 rounded-full"><i class="fa-solid fa-xmark"></i></button>
             </div>
 
-            <div class="p-6 overflow-y-auto hide-scrollbar space-y-5">
-                <!-- 輸入消費 -->
-                <div class="bg-white border border-gray-100 shadow-sm rounded-[1.5rem] p-4 space-y-4">
-                    <div class="flex gap-3">
-                        <div class="flex-1 space-y-1">
-                            <label class="text-xs font-bold text-gray-500">消費項目</label>
-                            <input type="text" id="accItem" placeholder="例: 犛牛火鍋、接駁車" class="w-full bg-gray-50 border border-gray-200 rounded-xl px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#3B7AAE]">
-                        </div>
-                        <div class="w-1/3 space-y-1">
-                            <label class="text-xs font-bold text-gray-500">金額</label>
-                            <input type="number" id="accAmount" placeholder="0" class="w-full bg-gray-50 border border-gray-200 rounded-xl px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#3B7AAE]">
-                        </div>
+            <div class="flex-1 overflow-y-auto my-4 space-y-5 pr-1 no-scrollbar">
+                <div class="bg-slate-50 p-4 rounded-2xl space-y-3 border border-slate-100">
+                    <span class="text-2xs font-bold text-slate-400 tracking-wider uppercase"><i class="fa-solid fa-plus-circle mr-1"></i>紀錄一筆開銷</span>
+                    <div class="grid grid-cols-2 gap-2">
+                        <input type="text" id="billPurpose" placeholder="開銷項目 (如: 藏餐)" class="w-full bg-white border border-slate-200 rounded-xl px-3 py-2 text-xs focus:outline-none focus:border-amber-500">
+                        <input type="number" id="billAmount" placeholder="開銷金額" class="w-full bg-white border border-slate-200 rounded-xl px-3 py-2 text-xs focus:outline-none focus:border-amber-500">
                     </div>
-
-                    <div class="space-y-1">
-                        <label class="text-xs font-bold text-gray-500 block">誰代墊費用？</label>
-                        <select id="accPayer" class="w-full bg-gray-50 border border-gray-200 rounded-xl px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#3B7AAE]">
+                    <div>
+                        <label class="block text-2xs font-bold text-slate-400 mb-1">👤 誰負責代墊？</label>
+                        <select id="billPayer" class="w-full bg-white border border-slate-200 rounded-xl px-2 py-1.5 text-xs focus:outline-none focus:border-amber-500">
                             <option value="Eva">Eva</option>
                             <option value="Maya">Maya</option>
                             <option value="Celine">Celine</option>
@@ -492,220 +437,224 @@
                             <option value="Boy">Boy</option>
                         </select>
                     </div>
-
-                    <div class="space-y-1">
-                        <label class="text-xs font-bold text-gray-500 block">參與分帳成員 (預設全選七人)</label>
-                        <div class="flex flex-wrap gap-2 pt-1" id="accMembers"></div>
+                    <div>
+                        <div class="flex justify-between items-center mb-1">
+                            <label class="text-2xs font-bold text-slate-400">👥 誰參與平分？</label>
+                            <button onclick="toggleAllSharers(true)" class="text-2xs text-[#3B7AAE] hover:underline">全選</button>
+                        </div>
+                        <div class="flex flex-wrap gap-1.5" id="sharerContainer"></div>
                     </div>
-
-                    <button onclick="addExpense()" class="w-full bg-amber-500 text-white text-sm font-bold py-2.5 rounded-xl shadow-md hover:bg-amber-600 transition-all">
-                        <i class="fa-solid fa-plus mr-1"></i> 新增此筆花費
-                    </button>
+                    <button onclick="addBillItem()" class="w-full bg-amber-500 text-white font-bold text-xs py-2 rounded-xl shadow-sm">寫入帳本</button>
                 </div>
 
-                <!-- 消費紀錄 -->
-                <div>
-                    <h4 class="text-sm font-bold text-gray-700 mb-2 border-l-4 border-[#3B7AAE] pl-2">本次旅程消費清單</h4>
-                    <ul id="expenseList" class="space-y-2 text-sm">
-                        <li class="text-gray-400 text-center py-4 bg-gray-50 rounded-xl text-xs">目前沒有任何人記帳喔！</li>
-                    </ul>
+                <div class="space-y-2">
+                    <div class="flex justify-between items-center">
+                        <span class="text-2xs font-bold text-slate-400 tracking-wider uppercase">📋 流水帳明細</span>
+                        <button onclick="clearAllBills()" class="text-2xs text-rose-500 hover:underline">清空帳本</button>
+                    </div>
+                    <div id="billHistoryList" class="space-y-1.5 max-h-36 overflow-y-auto text-xs"></div>
+                </div>
+
+                <div class="bg-blue-50/60 border border-blue-100 rounded-2xl p-4 space-y-2">
+                    <span class="text-2xs font-bold text-[#3B7AAE] tracking-wider uppercase"><i class="fa-solid fa-chart-pie mr-1"></i>最終結算（誰該給誰多少錢）</span>
+                    <div id="settlementReport" class="text-xs space-y-1 text-slate-600 font-medium divide-y divide-blue-100/50"></div>
                 </div>
             </div>
 
-            <!-- LINE 複製導出按鈕 -->
-            <div class="p-5 border-t bg-white">
-                <button onclick="copyToLine()" class="w-full bg-[#06C755] text-white font-bold py-3.5 rounded-full shadow-lg hover:bg-opacity-90 transition-all flex justify-center items-center gap-2">
-                    <i class="fa-brands fa-line text-xl"></i> 複製清單與結算結果至 LINE
+            <div class="pt-3 border-t border-slate-100 flex-shrink-0">
+                <button onclick="copyToLineFormat()" class="w-full bg-[#06C755] text-white font-bold text-sm py-3 rounded-xl flex items-center justify-center space-x-2 shadow-lg">
+                    <i class="fa-brands fa-line text-lg"></i>
+                    <span>複製完整分帳報告到 LINE</span>
                 </button>
             </div>
         </div>
     </div>
 
-    <!-- 底部浮動導覽與核心功能條 -->
-    <nav class="fixed bottom-4 left-1/2 -translate-x-1/2 w-[92%] max-w-sm bg-white/80 backdrop-blur-md rounded-full px-4 py-3 shadow-xl border border-white/40 flex justify-between items-center z-40">
-        <a href="#day2" class="flex flex-col items-center text-gray-400 hover:fuji-blue-text transition-colors w-12">
-            <i class="fa-solid fa-map-location-dot text-lg"></i>
-            <span class="text-[10px] mt-0.5 transform scale-90">拉薩</span>
-        </a>
-        <a href="#day4" class="flex flex-col items-center text-gray-400 hover:fuji-blue-text transition-colors w-12">
-            <i class="fa-solid fa-water text-lg"></i>
-            <span class="text-[10px] mt-0.5 transform scale-90">羊湖</span>
-        </a>
-        
-        <!-- 核心亮點：突出的圓角記帳按鈕 -->
-        <button onclick="openAccountingModal()" class="relative -top-5 bg-amber-400 text-white w-14 h-14 rounded-full flex flex-col items-center justify-center shadow-lg border-4 border-slate-50 hover:bg-amber-500 transition-transform hover:scale-105 active:scale-95 z-50">
-            <i class="fa-solid fa-file-invoice-dollar text-xl mb-0.5"></i>
-            <span class="text-[9px] font-bold leading-none">記帳</span>
-        </button>
 
-        <a href="#day5" class="flex flex-col items-center text-gray-400 hover:fuji-blue-text transition-colors w-12">
-            <i class="fa-solid fa-snowflake text-lg"></i>
-            <span class="text-[10px] mt-0.5 transform scale-90">珠峰</span>
-        </a>
-        <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="flex flex-col items-center text-gray-400 hover:fuji-blue-text transition-colors w-12">
-            <i class="fa-solid fa-arrow-up text-lg"></i>
-            <span class="text-[10px] mt-0.5 transform scale-90">Top</span>
-        </button>
-    </nav>
-
-    <!-- 複製成功彈出訊息 Toast -->
-    <div id="toast" class="fixed top-10 left-1/2 -translate-x-1/2 bg-gray-800 text-white text-sm px-6 py-3 rounded-full shadow-2xl transition-opacity duration-300 opacity-0 pointer-events-none z-[60]">
-        ✅ 結算報表已複製到剪貼簿！快去 LINE 貼上吧～
-    </div>
-
-    <!-- 系統功能主控腳本 -->
     <script>
-        const typeStyles = {
-            '景點': { bg: 'bg-red-50', text: 'text-red-600', border: 'border-red-100' },
-            '交通': { bg: 'bg-blue-50', text: 'text-blue-600', border: 'border-blue-100' },
-            '酒店': { bg: 'bg-amber-50', text: 'text-amber-600', border: 'border-amber-100' },
-            '食物': { bg: 'bg-orange-50', text: 'text-orange-600', border: 'border-orange-100' },
-            '購物': { bg: 'bg-purple-50', text: 'text-purple-600', border: 'border-purple-100' },
-            '活動': { bg: 'bg-green-50', text: 'text-green-600', border: 'border-green-100' }
-        };
+        const members = ["Eva", "Maya", "Celine", "Joanne", "Yiming", "Chloe", "Boy"];
+        let bills = JSON.parse(localStorage.getItem('travel_bills_v2')) || [];
 
-        // 行程編輯模組
+        document.addEventListener('DOMContentLoaded', () => {
+            renderSharerCheckboxes();
+            renderBillSystem();
+            loadSavedSpots();
+        });
+
+        // 行程修改核心邏輯
         function openEditModal(spotId) {
-            const spotElement = document.getElementById(spotId);
-            document.getElementById('editSpotId').value = spotId;
-            document.getElementById('editType').value = spotElement.querySelector('.spot-type').innerText.trim();
-            document.getElementById('editTitle').value = spotElement.querySelector('.spot-title').innerText.trim();
-            document.getElementById('editDesc').value = spotElement.querySelector('.spot-desc').innerText.trim();
+            const card = document.querySelector(`[data-id="${spotId}"]`);
+            if (!card) return;
+            document.getElementById('currentSpotId').value = spotId;
+            document.getElementById('inputTitle').value = card.querySelector('.spot-title').innerText;
+            document.getElementById('inputType').value = card.querySelector('.tag-type').innerText;
+            document.getElementById('inputDesc').value = card.querySelector('.spot-desc').innerText;
             document.getElementById('editModal').classList.remove('hidden');
-            setTimeout(() => document.getElementById('modalContainer').classList.remove('translate-y-full'), 10);
         }
-
-        function closeEditModal() {
-            document.getElementById('modalContainer').classList.add('translate-y-full');
-            setTimeout(() => document.getElementById('editModal').classList.add('hidden'), 300);
-        }
-
-        function saveSpotChange() {
-            const spotId = document.getElementById('editSpotId').value;
-            const newType = document.getElementById('editType').value;
-            const spotElement = document.getElementById(spotId);
-            const typeLabel = spotElement.querySelector('.spot-type');
-            
-            typeLabel.innerText = newType;
-            spotElement.querySelector('.spot-title').innerText = document.getElementById('editTitle').value;
-            spotElement.querySelector('.spot-desc').innerText = document.getElementById('editDesc').value;
-            typeLabel.className = `spot-type text-xs font-medium px-2 py-0.5 rounded ${typeStyles[newType].bg} ${typeStyles[newType].text} border ${typeStyles[newType].border}`;
-            
+        function closeEditModal() { document.getElementById('editModal').classList.add('hidden'); }
+        function saveChanges() {
+            const id = document.getElementById('currentSpotId').value;
+            const card = document.querySelector(`[data-id="${id}"]`);
+            if (card) {
+                card.querySelector('.spot-title').innerText = document.getElementById('inputTitle').value;
+                card.querySelector('.tag-type').innerText = document.getElementById('inputType').value;
+                card.querySelector('.spot-desc').innerText = document.getElementById('inputDesc').value;
+                localStorage.setItem(`spot_v2_${id}_title`, document.getElementById('inputTitle').value);
+                localStorage.setItem(`spot_v2_${id}_type`, document.getElementById('inputType').value);
+                localStorage.setItem(`spot_v2_${id}_desc`, document.getElementById('inputDesc').value);
+            }
             closeEditModal();
         }
-
-        // 記帳分帳模組核心
-        const groupMembers = ['Eva', 'Maya', 'Celine', 'Joanne', 'Yiming', 'Chloe', 'Boy'];
-        let expenses = [];
-
-        function initMembersCheckbox() {
-            const container = document.getElementById('accMembers');
-            container.innerHTML = '';
-            groupMembers.forEach(member => {
-                const label = document.createElement('label');
-                label.className = 'cursor-pointer';
-                label.innerHTML = `
-                    <input type="checkbox" value="${member}" class="member-checkbox hidden" checked>
-                    <div class="px-3 py-1 rounded-full text-xs border border-gray-200 bg-white text-gray-500 transition-colors">
-                        ${member}
-                    </div>
-                `;
-                container.appendChild(label);
-            });
-        }
-        initMembersCheckbox();
-
-        function openAccountingModal() {
-            document.getElementById('accountingModal').classList.remove('hidden');
-            setTimeout(() => document.getElementById('accountingContainer').classList.remove('translate-y-full'), 10);
-        }
-
-        function closeAccountingModal() {
-            document.getElementById('accountingContainer').classList.add('translate-y-full');
-            setTimeout(() => document.getElementById('accountingModal').classList.add('hidden'), 300);
-        }
-
-        function addExpense() {
-            const item = document.getElementById('accItem').value.trim();
-            const amount = parseFloat(document.getElementById('accAmount').value);
-            const payer = document.getElementById('accPayer').value;
-            const checkboxes = document.querySelectorAll('.member-checkbox:checked');
-            const splitMembers = Array.from(checkboxes).map(cb => cb.value);
-
-            if (!item || !amount || amount <= 0 || splitMembers.length === 0) {
-                alert('請確實填妥項目、金額，且分帳成員不能空著喔！');
-                return;
-            }
-
-            expenses.push({ item, amount, payer, splitMembers });
-            document.getElementById('accItem').value = '';
-            document.getElementById('accAmount').value = '';
-            renderExpenseList();
-        }
-
-        function renderExpenseList() {
-            const list = document.getElementById('expenseList');
-            if (expenses.length === 0) {
-                list.innerHTML = '<li class="text-gray-400 text-center py-4 bg-gray-50 rounded-xl text-xs">目前沒有任何人記帳喔！</li>';
-                return;
-            }
-            list.innerHTML = '';
-            expenses.forEach((exp) => {
-                const li = document.createElement('li');
-                li.className = 'bg-white border border-gray-100 rounded-xl p-3 flex justify-between items-center shadow-sm';
-                li.innerHTML = `
-                    <div>
-                        <div class="font-bold text-gray-700">${exp.item}</div>
-                        <div class="text-[10px] text-gray-400 mt-0.5">${exp.payer} 墊付 · ${exp.splitMembers.length}人平分</div>
-                    </div>
-                    <div class="font-bold text-[#3B7AAE]">$${exp.amount}</div>
-                `;
-                list.appendChild(li);
-            });
-        }
-
-        function copyToLine() {
-            if (expenses.length === 0) {
-                alert('清單空空的，快去記錄一筆花費吧！');
-                return;
-            }
-
-            let balances = {};
-            groupMembers.forEach(m => balances[m] = 0);
-
-            expenses.forEach(exp => {
-                balances[exp.payer] += exp.amount;
-                const splitAmount = exp.amount / exp.splitMembers.length;
-                exp.splitMembers.forEach(m => { balances[m] -= splitAmount; });
-            });
-
-            let lineText = "🏔️ 西藏聖境團・分帳總結算明細 🏔️\n-------------------\n📝 【詳細消費明細紀錄】\n";
-            expenses.forEach((exp, i) => {
-                lineText += `${i+1}. ${exp.item}：$${exp.amount} (${exp.payer} 先代墊)\n`;
-            });
-            
-            lineText += "-------------------\n💰 【各團員應收/應付總覽】\n";
-            groupMembers.forEach(m => {
-                let bal = Math.round(balances[m]);
-                if (bal > 0) {
-                    lineText += `🟢 ${m} 還可以「收回」：$${bal}\n`;
-                } else if (bal < 0) {
-                    lineText += `🔴 ${m} 目前「應支付」：$${Math.abs(bal)}\n`;
-                } else {
-                    lineText += `⚪ ${m} 已結清不用收付\n`;
+        function loadSavedSpots() {
+            document.querySelectorAll('.spot-card').forEach(card => {
+                const id = card.getAttribute('data-id');
+                if(localStorage.getItem(`spot_v2_${id}_title`)) {
+                    card.querySelector('.spot-title').innerText = localStorage.getItem(`spot_v2_${id}_title`);
+                    card.querySelector('.tag-type').innerText = localStorage.getItem(`spot_v2_${id}_type`);
+                    card.querySelector('.spot-desc').innerText = localStorage.getItem(`spot_v2_${id}_desc`);
                 }
             });
-            lineText += "-------------------\n🙋 請大家核對款項後，點對點私訊或在群組轉帳完成喔！謝謝大家！";
+        }
 
-            navigator.clipboard.writeText(lineText).then(() => {
-                const toast = document.getElementById('toast');
-                toast.classList.remove('opacity-0');
-                setTimeout(() => toast.classList.add('opacity-0'), 2500);
-                closeAccountingModal();
-            }).catch(err => {
-                alert('瀏覽器暫不支援自動複製，請手動複製文字區塊。');
+        // 分帳核心邏輯
+        function openBillModal() { document.getElementById('billModal').classList.remove('hidden'); }
+        function closeBillModal() { document.getElementById('billModal').classList.add('hidden'); }
+        
+        function renderSharerCheckboxes() {
+            const container = document.getElementById('sharerContainer');
+            container.innerHTML = '';
+            members.forEach(m => {
+                container.innerHTML += `
+                    <label class="flex items-center space-x-1 bg-white border border-slate-200 px-2.5 py-1 rounded-xl cursor-pointer text-2xs select-none">
+                        <input type="checkbox" value="${m}" checked class="sharer-checkbox accent-amber-500 rounded">
+                        <span class="font-medium text-slate-700">${m}</span>
+                    </label>
+                `;
             });
         }
+        function toggleAllSharers(status) {
+            document.querySelectorAll('.sharer-checkbox').forEach(cb => cb.checked = status);
+        }
+
+        function addBillItem() {
+            const purpose = document.getElementById('billPurpose').value.trim();
+            const amount = parseFloat(document.getElementById('billAmount').value);
+            const payer = document.getElementById('billPayer').value;
+            const sharers = [];
+            document.querySelectorAll('.sharer-checkbox:checked').forEach(cb => sharers.push(cb.value));
+
+            if (!purpose || isNaN(amount) || amount <= 0) { alert('請輸入正確的消費項目與金額喔！'); return; }
+            if (sharers.length === 0) { alert('至少要勾選一個平分開銷的夥伴！'); return; }
+
+            bills.push({ id: Date.now(), purpose, amount, payer, sharers });
+            localStorage.setItem('travel_bills_v2', JSON.stringify(bills));
+            
+            document.getElementById('billPurpose').value = '';
+            document.getElementById('billAmount').value = '';
+            toggleAllSharers(true);
+            renderBillSystem();
+        }
+
+        function deleteBill(id) {
+            bills = bills.filter(b => b.id !== id);
+            localStorage.setItem('travel_bills_v2', JSON.stringify(bills));
+            renderBillSystem();
+        }
+
+        function clearAllBills() {
+            if(confirm('確定要清空整本帳本明細嗎？')) {
+                bills = [];
+                localStorage.removeItem('travel_bills_v2');
+                renderBillSystem();
+            }
+        }
+
+        function renderBillSystem() {
+            const listContainer = document.getElementById('billHistoryList');
+            if (bills.length === 0) {
+                listContainer.innerHTML = `<p class="text-slate-400 text-2xs text-center py-4">目前尚無帳目，快從上方開始記帳吧！</p>`;
+            } else {
+                listContainer.innerHTML = '';
+                bills.forEach(b => {
+                    listContainer.innerHTML += `
+                        <div class="flex justify-between items-center bg-slate-50 p-2 rounded-xl border border-slate-100">
+                            <div>
+                                <div class="font-bold text-slate-700">${b.purpose} <span class="text-amber-600 font-extrabold ml-1">$${b.amount}</span></div>
+                                <div class="text-3xs text-slate-400">由 ${b.payer} 墊付 · 參與(${b.sharers.length}人): ${b.sharers.join(',')}</div>
+                            </div>
+                            <button onclick="deleteBill(${b.id})" class="text-slate-300 hover:text-rose-500 px-1"><i class="fa-solid fa-xmark"></i></button>
+                        </div>
+                    `;
+                });
+            }
+
+            // 債務最小化運算矩陣
+            let netBalances = {};
+            members.forEach(m => netBalances[m] = 0);
+            bills.forEach(b => {
+                netBalances[b.payer] += b.amount;
+                const shareAmount = b.amount / b.sharers.length;
+                b.sharers.forEach(s => netBalances[s] -= shareAmount);
+            });
+
+            let debtors = [], creditors = [];
+            for (let m in netBalances) {
+                let bal = netBalances[m];
+                if (bal < -0.01) debtors.push({ name: m, amount: Math.abs(bal) });
+                else if (bal > 0.01) creditors.push({ name: m, amount: bal });
+            }
+
+            let settlementList = [];
+            let dIdx = 0, cIdx = 0;
+            while (dIdx < debtors.length && cIdx < creditors.length) {
+                let debtor = debtors[dIdx], creditor = creditors[cIdx];
+                let transfer = Math.min(debtor.amount, creditor.amount);
+                if (transfer > 0.01) settlementList.push({ from: debtor.name, to: creditor.name, amount: transfer.toFixed(1) });
+                debtor.amount -= transfer; creditor.amount -= transfer;
+                if (debtor.amount <= 0.01) dIdx++;
+                if (creditor.amount <= 0.01) cIdx++;
+            }
+
+            const reportContainer = document.getElementById('settlementReport');
+            if (settlementList.length === 0) {
+                reportContainer.innerHTML = `<p class="text-slate-400 text-2xs py-1">🎉 帳目完全平衡，不需要匯款開銷！</p>`;
+            } else {
+                reportContainer.innerHTML = '';
+                settlementList.forEach(s => {
+                    reportContainer.innerHTML += `
+                        <div class="flex justify-between items-center py-1.5 text-2xs">
+                            <div>💸 <span class="font-bold text-rose-500">${s.from}</span> 轉帳給 ➡️ <span class="font-bold text-emerald-600">${s.to}</span></div>
+                            <div class="font-bold text-slate-800">$ ${s.amount}</div>
+                        </div>
+                    `;
+                });
+            }
+            window.currentSettlementList = settlementList;
+        }
+
+        function copyToLineFormat() {
+            if (bills.length === 0) { alert('目前帳本內沒有任何開銷可以產生報告唷！'); return; }
+            let text = `✨ 🏔️【西藏聖境之旅 - 團友分帳報告】🏔️ ✨\n===============================\n\n📋 花費流水帳：\n`;
+            let total = 0;
+            bills.forEach((b, i) => { text += `${i+1}. ${b.purpose}：$${b.amount} (由 ${b.payer} 代墊，${b.sharers.length}人平分)\n`; total += b.amount; });
+            text += `\n💰 總花費金額：$${total.toFixed(1)}\n===============================\n\n💵 最終結算匯款指引（請記得找時間匯款唷）：\n`;
+            if (!window.currentSettlementList || window.currentSettlementList.length === 0) { text += `🎉 帳目已完美打平，無須付款或收款！\n`; } 
+            else { window.currentSettlementList.forEach(s => { text += `👉【${s.from}】轉帳給 ➡️【${s.to}】 $${s.amount}\n`; }); }
+            text += `\n大家辛苦了！祝每位夥伴旅途平安快樂！✈️`;
+
+            navigator.clipboard.writeText(text).then(() => { alert('📋 格式化 LINE 報告已成功複製至剪貼簿！'); }).catch(() => { alert('複製失敗，請手動複製文字。'); });
+        }
+
+        // 導覽平滑滾動
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const targetId = this.getAttribute('href');
+                if(targetId && targetId.startsWith('#')) {
+                    e.preventDefault();
+                    document.querySelector(targetId).scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
     </script>
 </body>
 </html>
